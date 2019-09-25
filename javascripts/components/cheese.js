@@ -2,29 +2,41 @@ import utilities from '../helpers/utilities.js';
 
 const cheese = [
     {
+        id: 'cheese1',
         cheeseName: 'Mozzarella',
-        cheesePrice: 0.50
+        cheesePrice: 50
     },
     {
+        id: 'cheese2',
         cheeseName: 'Asiago',
-        cheesePrice: 0.75
+        cheesePrice: 75
     },
     {
+        id: 'cheese3',
         cheeseName: 'Cheddar',
-        cheesePrice: 0.50
+        cheesePrice: 50
     },
     {
+        id: 'cheese4',
         cheeseName: 'Feta',
-        cheesePrice: 0.75
+        cheesePrice: 500
     },
     {
+        id: 'cheese5',
         cheeseName: 'Gouda',
-        cheesePrice: 0.75
+        cheesePrice: 90
     }
 ];
 
 const cheesePrinter = () => {
-    const domString = `<h2>Cheese</h2>`;
+    let domString = '';
+    for (let i = 0; i < cheese.length; i++) {
+        domString += `
+    <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id=${cheese[i].id}>
+        <label class="form-check-label" for=${cheese[i].id}>${cheese[i].cheeseName}</label>
+    </div>`;
+  }
     utilities.printToDom('cheese-counter', domString);
 };
 
