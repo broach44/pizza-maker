@@ -5,6 +5,8 @@ Use this application to select pizza toppings and get a final cost for your pizz
 
 ## Screenshots
 
+![Main View](https://raw.githubusercontent.com/broach44/pizza-maker/master/screenshots/main-screen.PNG)
+
 ## How to run
 * Clone down this project
 * Install [http-server](https://www.npmjs.com/package/http-server) from npm
